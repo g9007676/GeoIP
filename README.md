@@ -2,12 +2,16 @@
 測試，取得 GeoIp 提供的 IP 資料庫，並運用 libs 來取得本地端位置
 
 
-# USE https://github.com/g9007676/GeoIP2-php
+##USE https://github.com/g9007676/GeoIP2-php
 
-增加取得 官網提供的 data檔案
+##增加取得 官網提供的 data檔案
 
-script.php
-
+### script.php ###
+```php
+  <?php
+  shell_exec('wget -P mmdb/ http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz');
+  shell_exec('gunzip mmdb/GeoLite2-City.mmdb.gz');
+```
 
 ### City Example ###
 
